@@ -50,7 +50,7 @@ export function Home() {
             type="text"
             placeholder="Give your task a name"
             list="task-suggestions"
-            {...register('task', { valueAsNumber: true })}
+            {...register('task')}
           />
 
           <datalist id="task-suggestions">
@@ -68,7 +68,7 @@ export function Home() {
             step={5}
             min={5}
             max={60}
-            {...register('minutesAmount')}
+            {...register('minutesAmount', { valueAsNumber: true })}
           />
 
           <span>minutos.</span>
